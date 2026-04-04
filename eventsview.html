@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#9D00FF', // Electric Violet
+                        'primary-dim': '#7A00C7',
+                        background: '#000000',
+                        'surface-container-low': '#0a0a0a',
+                        'surface-container-high': '#141414',
+                        'on-surface-variant': '#a3a3a3',
+                    },
+                    fontFamily: {
+                        headline: ['Space Grotesk', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                        label: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+        .selection\:bg-primary::selection {
+            background-color: #9D00FF;
+            color: white;
+        }
+        .glass-effect {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        #mobile-menu-overlay {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-white font-body selection:bg-primary selection:text-white">
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 z-[100] bg-background glass-effect flex flex-col p-8" id="mobile-menu-overlay">
+<div class="flex justify-between items-center mb-16">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">UTOPIC</div>
+<button class="material-symbols-outlined text-white text-3xl" onclick="toggleMobileMenu()">close</button>
+</div>
+<div class="flex flex-col space-y-8 mb-auto">
+<a class="text-4xl font-headline font-bold uppercase tracking-tighter text-white" href="index.html" onclick="toggleMobileMenu()">Home</a>
+<a class="text-4xl font-headline font-bold uppercase tracking-tighter text-primary" href="events.html" onclick="toggleMobileMenu()">Events</a>
+<a class="text-4xl font-headline font-bold uppercase tracking-tighter text-white/70" href="agency.html" onclick="toggleMobileMenu()">Agency</a>
+<a class="text-4xl font-headline font-bold uppercase tracking-tighter text-white/70" href="label.html" onclick="toggleMobileMenu()">Label</a>
+<a class="text-4xl font-headline font-bold uppercase tracking-tighter text-white/70" href="archive.html" onclick="toggleMobileMenu()">Archive</a>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Language Toggle Mobile -->
+<div class="flex items-center bg-[#141414] rounded-full px-1 py-1 w-fit border border-white/5">
+<button class="lang-btn-en px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 bg-primary text-white" id="mobile-lang-en">EN</button>
+<button class="lang-btn-es px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 text-white/50 hover:text-white" id="mobile-lang-es">ES</button>
+</div>
+<button class="bg-primary text-white px-10 py-4 rounded-xl font-headline font-bold uppercase text-xs tracking-widest w-full">
+            Book Now
+        </button>
+</div>
+</div>
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky z-50 bg-[#0e0e0e]/40 backdrop-blur-xl shadow-[0_32px_32px_rgba(207,150,255,0.06)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">UTOPIC</div>
+<div class="hidden md:flex items-center space-x-10 font-['Space_Grotesk'] tracking-tight uppercase text-sm">
+<a class="text-white/70 hover:text-white transition-colors" href="index.html">Home</a>
+<a class="text-[#cf96ff] font-bold border-b-2 border-[#cf96ff] pb-1" href="events.html">Events</a>
+<a class="text-white/70 hover:text-white transition-colors" href="agency.html">Agency</a>
+<a class="text-white/70 hover:text-white transition-colors" href="label.html">Label</a>
+<a class="text-white/70 hover:text-white transition-colors" href="archive.html">Archive</a>
+</div>
+<div class="flex items-center space-x-6">
+<!-- Language Toggle Desktop -->
+<div class="hidden md:flex items-center gap-2 font-label text-[10px] uppercase tracking-widest">
+<button class="text-[#cf96ff] font-bold lang-btn-en" id="desktop-lang-en">EN</button>
+<span class="text-white/20">|</span>
+<button class="text-white/50 hover:text-white transition-colors lang-btn-es" id="desktop-lang-es">ES</button>
+</div>
+<button class="hidden md:block bg-primary text-white px-6 py-2 rounded-xl font-headline font-bold uppercase tracking-tight hover:bg-primary-dim transition-all duration-300 scale-98 active:scale-95">
+                Book Now
+            </button>
+<!-- Mobile Menu Trigger (Hamburger) -->
+<button class="md:hidden material-symbols-outlined text-white text-3xl p-1" onclick="toggleMobileMenu()">menu</button>
+</div>
+</div>
+</nav>
+<main class="min-h-screen">
+<section class="relative h-[614px] flex items-end px-8 pb-16 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Dark techno club with purple laser beams" class="w-full h-full object-cover opacity-70" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKHCi5A0YWv5hJfJ82EfWyy3kSJ-had1oPqjs5CfSxqXL4NAC_BQMsrMusylwO_MPTa1wdaEZftA9rRXfHTSr9gYM12tJoVm7_VnKh4DFiq2Kgx8fH_PqRN3Zm3ihGm1fU2nvm38OKv8b-4P2YDusOCMuxiMxGdolbAgWtACIKv4E8Z8e9FefVTi_namfK3ImczJO2BTj2hcOUWfBrLCxCBFSfNFkDi4PZwTOaVqPmUbhacTl5rfVGeS_lxsc2-GlF-7_i6_IQzBbD"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-screen-2xl mx-auto w-full">
+<h1 class="text-7xl md:text-[12rem] font-headline font-black tracking-tighter text-white leading-[0.8] mb-4 text-glow">
+                EXPERIENCES<span class="text-primary">.</span>
+</h1>
+<p class="font-label uppercase tracking-[0.3em] text-primary text-sm md:text-base ml-2">
+                Sonic Architecture &amp; Immersive Curations
+            </p>
+</div>
+</section>
+<section class="max-w-screen-2xl mx-auto px-8 py-24">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-white mb-4">Upcoming Schedule</h2>
+<p class="text-on-surface-variant text-lg">Curated movements across the globe. Each event is a bespoke study in sound, light, and human connection.</p>
+</div>
+<div class="font-label text-xs uppercase tracking-widest text-primary border-b border-primary/30 pb-2">
+                SCROLL TO EXPLORE
+            </div>
+</div>
+<div class="grid grid-cols-1 gap-12" id="events-container">
+<div class="col-span-full text-center py-20">
+<p class="animate-pulse text-primary font-label uppercase tracking-widest">Loading Curations...</p>
+</div>
+</div>
+</section>
+<section class="bg-[#050505] py-32">
+<div class="max-w-screen-2xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<h2 class="text-4xl md:text-6xl font-headline font-bold text-white">Past Iterations</h2>
+<a class="group flex items-center gap-2 text-primary font-label uppercase text-sm tracking-widest mt-4" href="https://www.facebook.com/utopic.ar.ba/photos_albums" target="_blank">
+                    View Full Archive
+                    <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="past-iterations-container">
+<!-- Loading state -->
+<div class="col-span-full text-center py-12">
+<p class="animate-pulse text-primary font-label uppercase tracking-widest">Recalling Memories...</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-32 flex flex-col items-center justify-center text-center px-8 border-t border-white/5">
+<h4 class="text-primary font-label uppercase tracking-[0.4em] text-sm mb-6">Stay Connected</h4>
+<h2 class="text-5xl md:text-7xl font-headline font-black text-white mb-12 max-w-4xl leading-tight">JOIN THE INNER CIRCLE FOR PRIVATE ACCESS.</h2>
+</section>
+</main>
+<footer class="bg-black full-width flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full border-t border-white/10">
+<div class="mb-12 md:mb-0">
+<div class="text-xl font-black text-[#cf96ff] font-headline mb-4">UTOPIC</div>
+<p class="font-['Inter'] text-[10px] uppercase tracking-[0.05em] text-white/50">© 2024 UTOPIC. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 md:gap-12 font-['Inter'] text-[10px] uppercase tracking-[0.05em]">
+<a class="text-white/50 hover:text-[#cf96ff] transition-colors" href="https://www.instagram.com/">Instagram</a>
+<a class="text-white/50 hover:text-[#cf96ff] transition-colors" href="https://ra.co/">Resident Advisor</a>
+<a class="text-white/50 hover:text-[#cf96ff] transition-colors" href="https://soundcloud.com/">Soundcloud</a>
+<a class="text-white/50 hover:text-[#cf96ff] transition-colors" href="privacy.html">Privacy Policy</a>
+<a class="text-white/50 hover:text-[#cf96ff] transition-colors" href="contact.html">Contact</a>
+</div>
+</footer>
+<script>
+    // Mobile Menu Logic
+    function toggleMobileMenu() {
+        const overlay = document.getElementById('mobile-menu-overlay');
+        overlay.classList.toggle('active');
+        document.body.classList.toggle('overflow-hidden');
+    }
+
+    // Language Toggle Logic
+    const langBtnsEn = [document.getElementById('desktop-lang-en'), document.getElementById('mobile-lang-en')];
+    const langBtnsEs = [document.getElementById('desktop-lang-es'), document.getElementById('mobile-lang-es')];
+
+    function setLanguage(lang) {
+        if (lang === 'en') {
+            langBtnsEn.forEach(btn => {
+                if (btn && btn.id.startsWith('mobile')) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('text-white/50');
+                } else if (btn) {
+                    btn.classList.add('text-[#cf96ff]', 'font-bold');
+                    btn.classList.remove('text-white/50');
+                }
+            });
+            langBtnsEs.forEach(btn => {
+                if (btn && btn.id.startsWith('mobile')) {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('text-white/50');
+                } else if (btn) {
+                    btn.classList.remove('text-[#cf96ff]', 'font-bold');
+                    btn.classList.add('text-white/50');
+                }
+            });
+        } else {
+            langBtnsEs.forEach(btn => {
+                if (btn && btn.id.startsWith('mobile')) {
+                    btn.classList.add('bg-primary', 'text-white');
+                    btn.classList.remove('text-white/50');
+                } else if (btn) {
+                    btn.classList.add('text-[#cf96ff]', 'font-bold');
+                    btn.classList.remove('text-white/50');
+                }
+            });
+            langBtnsEn.forEach(btn => {
+                if (btn && btn.id.startsWith('mobile')) {
+                    btn.classList.remove('bg-primary', 'text-white');
+                    btn.classList.add('text-white/50');
+                } else if (btn) {
+                    btn.classList.remove('text-[#cf96ff]', 'font-bold');
+                    btn.classList.add('text-white/50');
+                }
+            });
+        }
+    }
+
+    langBtnsEn.forEach(btn => btn?.addEventListener('click', () => setLanguage('en')));
+    langBtnsEs.forEach(btn => btn?.addEventListener('click', () => setLanguage('es')));
+
+    // Google Drive Image URL Helper
+    function formatImageUrl(url) {
+        if (!url) return '';
+        if (url.includes('drive.google.com')) {
+            const id = url.match(/[-\w]{25,}/);
+            return id ? `https://docs.google.com/uc?export=view&id=${id[0]}` : url;
+        }
+        return url;
+    }
+
+    // Unified Data Fetcher for Events and Past Iterations
+    async function fetchSheetData(gid) {
+        const sheetId = '18cSR2nwf6K3rPtGKzK2qmfWrj25GDvtNVvpHuBx7XqM';
+        const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:csv&gid=${gid}`;
+        
+        try {
+            const response = await fetch(url);
+            const data = await response.text();
+            // Basic CSV parser handle commas within quotes
+            const rows = data.split('\n').slice(1).map(row => {
+                const matches = row.match(/("([^"]*)"|[^,]+)/g);
+                return matches ? matches.map(m => m.replace(/^"|"$/g, '')) : [];
+            });
+            return rows;
+        } catch (error) {
+            console.error('Error fetching sheet data:', error);
+            return [];
+        }
+    }
+
+    // Fetch Events (GID 0 - Default)
+    async function fetchEvents() {
+        const rows = await fetchSheetData('0');
+        const container = document.getElementById('events-container');
+        if (!rows.length) {
+            container.innerHTML = '<p class="text-red-500 text-center py-20 font-label uppercase tracking-widest">Failed to load schedule.</p>';
+            return;
+        }
+        
+        container.innerHTML = '';
+        rows.forEach((row, index) => {
+            if (row.length < 5) return;
+            const [evento, fecha, club, venta, imagen] = row;
+            const formattedImg = formatImageUrl(imagen);
+            const isEven = index % 2 === 0;
+            const flexClass = isEven ? 'md:flex-row' : 'md:flex-row-reverse';
+
+            const eventCard = `
+                <div class="group relative flex flex-col ${flexClass} bg-surface-container-low border border-white/5 rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500">
+                    <div class="md:w-2/5 aspect-video md:aspect-auto overflow-hidden">
+                        <img alt="${evento}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="${formattedImg}"/>
+                    </div>
+                    <div class="p-8 md:p-12 flex flex-col justify-between flex-1">
+                        <div>
+                            <div class="flex justify-between items-start mb-6">
+                                <span class="font-label text-xs uppercase tracking-[0.2em] text-primary bg-primary/10 px-3 py-1 rounded-full">${fecha}</span>
+                                <span class="font-label text-[10px] uppercase tracking-widest text-on-surface-variant">SPECIAL PERFORMANCE</span>
+                            </div>
+                            <h3 class="text-4xl md:text-5xl font-headline font-bold text-white mb-4 group-hover:text-primary transition-colors uppercase">${evento}</h3>
+                            <p class="text-on-surface-variant text-lg mb-8 max-w-lg">An immersive sonic journey curated by UTOPIC, exploring the intersection of architecture and modular sound.</p>
+                        </div>
+                        <div class="flex flex-col sm:flex-row justify-between items-center pt-8 border-t border-white/5 gap-6">
+                            <div class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-primary">location_on</span>
+                                <span class="font-label uppercase tracking-widest text-sm">${club}</span>
+                            </div>
+                            <a class="w-full sm:w-auto text-center bg-primary text-white px-10 py-4 rounded-xl font-headline font-bold uppercase tracking-tight hover:shadow-[0_0_30px_rgba(157,0,255,0.4)] transition-all" href="${venta}" target="_blank">
+                                Get Tickets
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', eventCard);
+        });
+    }
+
+    // Fetch Past Iterations (GID 1207146259)
+    async function fetchPastIterations() {
+        const rows = await fetchSheetData('1207146259');
+        const container = document.getElementById('past-iterations-container');
+        
+        if (!rows.length) {
+            container.innerHTML = '<p class="text-on-surface-variant/50 text-center py-12 font-label uppercase text-xs tracking-widest">Archive currently offline.</p>';
+            return;
+        }
+
+        container.innerHTML = '';
+        // Limit to 8 images for the home grid, or show all
+        rows.slice(0, 8).forEach(row => {
+            if (!row[0]) return; // Links column is first (index 0)
+            const formattedImg = formatImageUrl(row[0]);
+            const card = `
+                <div class="aspect-[3/4] relative group overflow-hidden rounded-xl bg-surface-container-low">
+                    <img alt="Past event iteration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="${formattedImg}" loading="lazy"/>
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <span class="material-symbols-outlined text-white text-3xl">visibility</span>
+                    </div>
+                </div>
+            `;
+            container.insertAdjacentHTML('beforeend', card);
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchEvents();
+        fetchPastIterations();
+    });
+</script>
+</body></html>

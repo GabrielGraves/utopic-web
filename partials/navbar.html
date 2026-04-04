@@ -1,0 +1,25 @@
+<nav class="glass-header docked full-width top-0 sticky z-50 border-b border-white/5">
+    <div class="flex justify-between items-center px-8 py-6 max-w-screen-2xl mx-auto">
+        <a class="text-2xl font-black tracking-tighter text-white font-headline" href="/">UTOPIC</a>
+        <div class="hidden md:flex items-center gap-10 font-['Space_Grotesk'] tracking-[0.1em] text-xs">
+            <a class="text-white/70 hover:text-primary transition-colors" href="/events.html">
+                <span class="lang-en">EVENTS</span><span class="lang-es">EVENTOS</span>
+            </a>
+            <a class="text-white/70 hover:text-primary transition-colors" href="/agency.html">
+                <span class="lang-en">AGENCY</span><span class="lang-es">AGENCIA</span>
+            </a>
+            <a class="text-white/70 hover:text-primary transition-colors" href="/label_view.html">
+                <span class="lang-en">LABEL</span><span class="lang-es">SELLO</span>
+            </a>
+        </div>
+        <div class="flex items-center space-x-6">
+            <div class="flex gap-4 mr-4 text-xs font-['Space_Grotesk'] tracking-widest font-bold">
+                <button id="btn-lang-en" class="underline underline-offset-4 decoration-primary text-white" onclick="window.setLanguage('en')">EN</button>
+                <button id="btn-lang-es" class="text-white/40 hover:text-white transition-colors" onclick="window.setLanguage('es')">ES</button>
+            </div>
+            <button class="bg-primary text-on-primary-fixed px-6 py-2 rounded-xl font-headline font-bold uppercase tracking-tight hover:bg-primary-dim transition-all duration-300">
+                <span class="lang-en">Book Now</span><span class="lang-es">Reservar</span>
+            </button>
+        </div>
+    </div>
+</nav>

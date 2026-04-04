@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>UTOPIC | Agency Roster</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-tint": "#cf96ff",
+                        "on-primary-container": "#37005f",
+                        "on-error-container": "#ffb2b9",
+                        "tertiary-container": "#fe7e8a",
+                        "on-secondary-container": "#f3beff",
+                        "on-primary": "#480079",
+                        "background": "#0e0e0e",
+                        "primary-dim": "#a533ff",
+                        "surface": "#0e0e0e",
+                        "tertiary": "#ff959d",
+                        "on-secondary": "#570e70",
+                        "surface-container": "#1a1919",
+                        "primary-fixed": "#c683ff",
+                        "outline-variant": "#494847",
+                        "surface-variant": "#262626",
+                        "on-surface-variant": "#adaaaa",
+                        "on-background": "#ffffff",
+                        "on-tertiary-fixed": "#39000b",
+                        "on-secondary-fixed": "#560e6f",
+                        "on-error": "#490013",
+                        "surface-bright": "#2c2c2c",
+                        "surface-container-highest": "#262626",
+                        "tertiary-fixed": "#ff9099",
+                        "outline": "#777575",
+                        "inverse-primary": "#8d00e6",
+                        "error": "#ff6e84",
+                        "surface-container-high": "#201f1f",
+                        "surface-container-lowest": "#000000",
+                        "inverse-surface": "#fcf8f8",
+                        "secondary-fixed": "#f3c0ff",
+                        "primary-container": "#c683ff",
+                        "on-secondary-fixed-variant": "#77328e",
+                        "on-tertiary": "#680a1f",
+                        "surface-container-low": "#131313",
+                        "tertiary-dim": "#f47783",
+                        "on-tertiary-container": "#570015",
+                        "tertiary-fixed-dim": "#fb7c88",
+                        "primary": "#cf96ff",
+                        "on-surface": "#ffffff",
+                        "surface-dim": "#0e0e0e",
+                        "inverse-on-surface": "#565554",
+                        "secondary-dim": "#d78cee",
+                        "secondary-container": "#6b2783",
+                        "secondary-fixed-dim": "#eeacff",
+                        "on-tertiary-fixed-variant": "#721325",
+                        "error-container": "#a70138",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed-variant": "#450074",
+                        "primary-fixed-dim": "#bc6fff",
+                        "secondary": "#e699fd",
+                        "error-dim": "#d73357"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .artist-card-gradient {
+            background: linear-gradient(to top, rgba(14,14,14,1) 0%, rgba(14,14,14,0.4) 40%, rgba(14,14,14,0) 100%);
+        }
+        [data-lang]:not([data-lang-current]) {
+            display: none !important;
+        }
+        .loader {
+            width: 48px;
+            height: 48px;
+            border: 3px solid #FFF;
+            border-bottom-color: #cf96ff;
+            border-radius: 50%;
+            display: inline-block;
+            box-sizing: border-box;
+            animation: rotation 1s linear infinite;
+        }
+        @keyframes rotation {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        #mobile-menu-overlay {
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(100%);
+        }
+        #mobile-menu-overlay.active {
+            transform: translateX(0);
+        }
+        #mobile-menu-overlay-backdrop {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+        #mobile-menu-overlay-backdrop.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary-fixed">
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-0 z-[110] bg-black/60 backdrop-blur-sm" id="mobile-menu-overlay-backdrop" onclick="toggleMobileMenu()"></div>
+<aside class="fixed right-0 top-0 h-full w-[80vw] max-w-sm z-[120] bg-[#0e0e0e] shadow-[32px_0_64px_rgba(165,51,255,0.1)] flex flex-col p-8 gap-6 transition-transform duration-500 ease-in-out font-['Space_Grotesk']" id="mobile-menu-overlay">
+<div class="flex justify-between items-center mb-4">
+<div class="text-3xl font-black text-white">UTOPIC</div>
+<button class="material-symbols-outlined text-white text-3xl p-1" onclick="toggleMobileMenu()">close</button>
+</div>
+<nav class="flex flex-col gap-6">
+<a class="flex items-center gap-4 text-white/70 pl-4 text-lg uppercase tracking-[0.05em] hover:bg-[#262626] hover:text-white transition-all" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span data-i18n="nav.home">HOME</span>
+</a>
+<a class="flex items-center gap-4 text-white/70 pl-4 text-lg uppercase tracking-[0.05em] hover:bg-[#262626] hover:text-white transition-all" href="events.html">
+<span class="material-symbols-outlined">event</span>
+<span data-i18n="nav.events">EVENTS</span>
+</a>
+<a class="flex items-center gap-4 text-[#cf96ff] font-bold border-l-4 border-[#cf96ff] pl-4 text-lg uppercase tracking-[0.05em] transition-all" href="agency.html">
+<span class="material-symbols-outlined">group</span>
+<span data-i18n="nav.agency">AGENCY</span>
+</a>
+<a class="flex items-center gap-4 text-white/70 pl-4 text-lg uppercase tracking-[0.05em] hover:bg-[#262626] hover:text-white transition-all" href="label.html">
+<span class="material-symbols-outlined">album</span>
+<span data-i18n="nav.label">LABEL</span>
+</a>
+<a class="flex items-center gap-4 text-white/70 pl-4 text-lg uppercase tracking-[0.05em] hover:bg-[#262626] hover:text-white transition-all" href="archive.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<span data-i18n="nav.archive">ARCHIVE</span>
+</a>
+</nav>
+<div class="mt-auto flex flex-col gap-6">
+<div class="flex items-center bg-[#1a1919] rounded-full p-1 border border-white/5 w-fit">
+<button class="lang-en px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 bg-primary text-on-primary-fixed" onclick="updateLanguage('en')">EN</button>
+<button class="lang-es px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 text-white/50 hover:text-white" onclick="updateLanguage('es')">ES</button>
+</div>
+<button class="bg-[#cf96ff] text-on-primary-fixed px-10 py-4 rounded-xl font-bold uppercase text-xs tracking-widest w-full active:scale-95 transition-all">
+<span data-i18n="nav.bookNow">BOOK NOW</span>
+</button>
+</div>
+</aside>
+<!-- TopAppBar (Desktop) -->
+<nav class="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-xl shadow-[0_0_20px_rgba(207,150,255,0.06)] flex justify-between items-center px-6 h-16">
+<div class="text-2xl font-bold tracking-widest text-white font-['Space_Grotesk']">UTOPIC</div>
+<div class="hidden md:flex items-center space-x-8 font-['Space_Grotesk'] tracking-tighter uppercase text-sm">
+<a class="text-white hover:text-[#cf96ff] transition-colors duration-300" href="index.html">
+<span data-i18n="nav.home">HOME</span>
+</a>
+<a class="text-white hover:text-[#cf96ff] transition-colors duration-300" href="events.html">
+<span data-i18n="nav.events">EVENTS</span>
+</a>
+<a class="text-[#cf96ff] font-bold transition-colors duration-300" href="agency.html">
+<span data-i18n="nav.agency">AGENCY</span>
+</a>
+<a class="text-white hover:text-[#cf96ff] transition-colors duration-300" href="label.html">
+<span data-i18n="nav.label">LABEL</span>
+</a>
+<a class="text-white hover:text-[#cf96ff] transition-colors duration-300" href="archive.html">
+<span data-i18n="nav.archive">ARCHIVE</span>
+</a>
+</div>
+<div class="flex items-center space-x-4">
+<!-- Language Toggle Desktop -->
+<div class="hidden md:flex items-center bg-[#1a1919] rounded-full p-1 border border-white/5">
+<button class="lang-en px-3 py-1 rounded-full text-[10px] font-bold transition-all duration-300 bg-primary text-on-primary-fixed" onclick="updateLanguage('en')">EN</button>
+<button class="lang-es px-3 py-1 rounded-full text-[10px] font-bold transition-all duration-300 text-white/50 hover:text-white" onclick="updateLanguage('es')">ES</button>
+</div>
+<button class="hidden md:block bg-[#cf96ff] text-on-primary-fixed px-6 py-2 rounded-xl font-headline font-bold uppercase text-xs tracking-widest scale-98 active:scale-90 transition-all duration-200">
+<span data-i18n="nav.bookNow">Book Now</span>
+</button>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-[#cf96ff] scale-95 active:scale-90 transition-transform" onclick="toggleMobileMenu()">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="min-h-screen">
+<header class="pt-32 pb-16 px-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/5 pb-12">
+<div>
+<span class="font-label text-primary text-xs uppercase tracking-[0.2em] mb-4 block">
+<span data-i18n="roster.label">Our Roster</span>
+</span>
+<h1 class="font-headline text-6xl md:text-8xl font-bold tracking-tighter text-white uppercase leading-none">
+<span data-i18n="roster.title">THE ROSTER</span>
+</h1>
+</div>
+<div class="max-w-md">
+<p class="text-on-surface-variant font-light text-lg leading-relaxed italic" data-i18n="roster.description">
+                        Curating the future of sonic architecture through a global collective of visionaries and sound designers.
+                    </p>
+</div>
+</div>
+</header>
+<section class="px-8 pb-32 max-w-screen-2xl mx-auto">
+<div class="flex flex-col items-center justify-center py-20 min-h-[400px]" id="loading-state">
+<span class="loader mb-4"></span>
+<p class="text-white/50 text-sm tracking-widest uppercase">
+<span data-i18n="loading">Syncing with the digital collective...</span>
+</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8" id="roster-grid">
+<!-- Dynamically loaded artists -->
+</div>
+</section>
+<section class="bg-surface-container-low py-32 px-8 overflow-hidden">
+<div class="max-w-screen-2xl mx-auto flex flex-col items-center text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black uppercase tracking-tighter text-white mb-8" data-i18n="cta.title">
+                    BRING THE SOUND <br/>TO YOUR STAGE
+                </h2>
+<button class="bg-primary text-on-primary-fixed font-headline font-bold py-6 px-16 rounded-full text-xl hover:scale-105 transition-all duration-300 shadow-[0_0_40px_rgba(207,150,255,0.3)]">
+<span data-i18n="cta.button">CONTACT AGENCY</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="bg-[#000000] border-t border-[#ffffff]/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-screen-2xl mx-auto">
+<div class="mb-12 md:mb-0">
+<div class="text-xl font-black text-[#cf96ff] font-headline mb-4">UTOPIC</div>
+<p class="text-[#ffffff]/50 font-['Inter'] text-[10px] uppercase tracking-[0.05em]">
+                    © 2024 UTOPIC. <span data-i18n="footer.rights">All Rights Reserved.</span>
+</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-[#ffffff]/50 hover:text-[#cf96ff] transition-colors font-['Inter'] text-[10px] uppercase tracking-[0.05em]" href="https://instagram.com" target="_blank">Instagram</a>
+<a class="text-[#ffffff]/50 hover:text-[#cf96ff] transition-colors font-['Inter'] text-[10px] uppercase tracking-[0.05em]" href="https://ra.co" target="_blank">Resident Advisor</a>
+<a class="text-[#ffffff]/50 hover:text-[#cf96ff] transition-colors font-['Inter'] text-[10px] uppercase tracking-[0.05em]" href="https://soundcloud.com/utopic_ar" target="_blank">Soundcloud</a>
+<a class="text-[#ffffff]/50 hover:text-[#cf96ff] transition-colors font-['Inter'] text-[10px] uppercase tracking-[0.05em]" href="#">
+<span data-i18n="footer.privacy">Privacy Policy</span>
+</a>
+<a class="text-[#ffffff]/50 hover:text-[#cf96ff] transition-colors font-['Inter'] text-[10px] uppercase tracking-[0.05em]" href="#">
+<span data-i18n="footer.contact">Contact</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        const translations = {
+            en: {
+                "nav.home": "Home",
+                "nav.events": "Events",
+                "nav.agency": "Agency",
+                "nav.label": "Label",
+                "nav.archive": "Archive",
+                "nav.bookNow": "Book Now",
+                "roster.label": "Our Roster",
+                "roster.title": "THE ROSTER",
+                "roster.description": "Curating the future of sonic architecture through a global collective of visionaries and sound designers.",
+                "loading": "Syncing with the digital collective...",
+                "cta.title": "BRING THE SOUND TO YOUR STAGE",
+                "cta.button": "CONTACT AGENCY",
+                "card.book": "Book Artist",
+                "footer.rights": "All Rights Reserved.",
+                "footer.privacy": "Privacy Policy",
+                "footer.contact": "Contact",
+                "error.title": "Error Connection",
+                "error.desc": "Failed to retrieve the artist roster from the cloud architecture.",
+                "error.retry": "Retry Sync"
+            },
+            es: {
+                "nav.home": "Inicio",
+                "nav.events": "Eventos",
+                "nav.agency": "Agencia",
+                "nav.label": "Sello",
+                "nav.archive": "Archivo",
+                "nav.bookNow": "Reservar",
+                "roster.label": "Nuestro Roster",
+                "roster.title": "EL ROSTER",
+                "roster.description": "Curando el futuro de la arquitectura sónica a través de un colectivo global de visionarios y diseñadores de sonido.",
+                "loading": "Sincronizando con el colectivo digital...",
+                "cta.title": "LLEVA EL SONIDO A TU ESCENARIO",
+                "cta.button": "CONTACTAR AGENCIA",
+                "card.book": "Contratar Artista",
+                "footer.rights": "Todos los derechos reservados.",
+                "footer.privacy": "Política de Privacidad",
+                "footer.contact": "Contacto",
+                "error.title": "Error de Conexión",
+                "error.desc": "No se pudo recuperar el roster de artistas de la arquitectura en la nube.",
+                "error.retry": "Reintentar Sincronización"
+            }
+        };
+
+        let currentLang = 'en';
+        let cachedArtistsData = [];
+
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobile-menu-overlay');
+            const backdrop = document.getElementById('mobile-menu-overlay-backdrop');
+            overlay.classList.toggle('active');
+            backdrop.classList.toggle('active');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            const btnEnList = document.querySelectorAll('.lang-en');
+            const btnEsList = document.querySelectorAll('.lang-es');
+            
+            if (lang === 'en') {
+                btnEnList.forEach(btn => btn.className = "lang-en px-3 py-1 md:px-3 md:py-1 px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 bg-primary text-on-primary-fixed");
+                btnEsList.forEach(btn => btn.className = "lang-es px-3 py-1 md:px-3 md:py-1 px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 text-white/50 hover:text-white");
+            } else {
+                btnEsList.forEach(btn => btn.className = "lang-es px-3 py-1 md:px-3 md:py-1 px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 bg-primary text-on-primary-fixed");
+                btnEnList.forEach(btn => btn.className = "lang-en px-3 py-1 md:px-3 md:py-1 px-6 py-2 rounded-full text-[10px] font-bold transition-all duration-300 text-white/50 hover:text-white");
+            }
+
+            if (cachedArtistsData.length > 0) {
+                renderRoster(cachedArtistsData);
+            }
+        }
+
+        function formatDriveUrl(url) {
+            if (!url) return 'https://images.unsplash.com/photo-1571266028243-e4bb33394c14?auto=format&fit=crop&q=80&w=800';
+            const regExp = /(?:id=|\/d\/|file\/d\/)([\w-]{25,})/;
+            const match = url.match(regExp);
+            if (match && match[1]) {
+                return `https://docs.google.com/uc?export=view&id=${match[1]}`;
+            }
+            return url;
+        }
+
+        async function fetchRoster() {
+            const SHEET_ID = '18cSR2nwf6K3rPtGKzK2qmfWrj25GDvtNVvpHuBx7XqM';
+            const ARTISTS_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&sheet=ARTISTS`;
+            const loadingState = document.getElementById('loading-state');
+            
+            try {
+                const response = await fetch(ARTISTS_URL);
+                if (!response.ok) throw new Error('Network response was not ok');
+                const csvText = await response.text();
+                
+                Papa.parse(csvText, {
+                    header: true,
+                    skipEmptyLines: true,
+                    complete: (results) => {
+                        if (results.data && results.data.length > 0) {
+                            cachedArtistsData = results.data.filter(entry => entry.NOMBRE && entry.NOMBRE !== '');
+                            renderRoster(cachedArtistsData);
+                            loadingState.style.display = 'none';
+                        } else {
+                            throw new Error('No data found');
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                loadingState.innerHTML = `
+                    <div class="text-center p-8 border border-error/20 rounded-xl bg-error/5 max-w-md">
+                        <span class="material-symbols-outlined text-error text-5xl mb-4">error</span>
+                        <p class="text-white font-headline text-xl mb-2">${translations[currentLang]["error.title"]}</p>
+                        <p class="text-on-surface-variant text-sm mb-6">${translations[currentLang]["error.desc"]}</p>
+                        <button onclick="location.reload()" class="text-xs tracking-widest uppercase border border-white/20 px-6 py-2 rounded-full hover:bg-white/10 transition-colors">${translations[currentLang]["error.retry"]}</button>
+                    </div>
+                `;
+            }
+        }
+
+        function renderRoster(artists) {
+            const grid = document.getElementById('roster-grid');
+            grid.innerHTML = '';
+            const bookText = translations[currentLang]["card.book"];
+
+            artists.forEach((artist) => {
+                const card = document.createElement('div');
+                card.className = `group relative bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500 hover:-translate-y-1 shadow-2xl h-full`;
+                
+                const imageUrl = formatDriveUrl(artist['FOTO']);
+                const profileUrl = `artist_profile_dynamic.html?name=${encodeURIComponent(artist['NOMBRE'])}`;
+
+                card.innerHTML = `
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img class="w-full h-full object-cover transition-all duration-700 ease-out" 
+                             src="${imageUrl}" 
+                             alt="${artist['NOMBRE']}"
+                             loading="lazy"
+                             onerror="this.src='https://images.unsplash.com/photo-1571266028243-e4bb33394c14?auto=format&fit=crop&q=80&w=800';">
+                        <div class="absolute inset-0 artist-card-gradient"></div>
+                    </div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8 pt-0">
+                        <div class="transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                            <span class="font-label text-[10px] text-primary uppercase tracking-[0.2em] font-bold mb-2 block">${artist['GENEROS'] || 'ELECTRONIC'}</span>
+                            <h3 class="font-headline text-3xl font-black text-white mb-6 uppercase tracking-tighter leading-none">${artist['NOMBRE']}</h3>
+                            <a href="${profileUrl}" class="block w-full text-center py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-label text-[10px] uppercase tracking-widest rounded-xl hover:bg-primary hover:text-on-primary-fixed hover:border-transparent transition-all duration-300">
+                                ${bookText}
+                            </a>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLanguage('en');
+            fetchRoster();
+        });
+    </script>
+</body></html>
