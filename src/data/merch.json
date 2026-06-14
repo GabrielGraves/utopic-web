@@ -1,0 +1,56 @@
+[
+  {
+    "id": "merch-001",
+    "name": "UTOPIC Logo Tee",
+    "name_es": "Remera UTOPIC Logo",
+    "price": "$35",
+    "category": "T-SHIRTS",
+    "category_es": "REMERAS",
+    "image_url": ""
+  },
+  {
+    "id": "merch-002",
+    "name": "UTOPIC Cap",
+    "name_es": "Gorra UTOPIC",
+    "price": "$28",
+    "category": "HEADWEAR",
+    "category_es": "GORRAS",
+    "image_url": ""
+  },
+  {
+    "id": "merch-003",
+    "name": "UTOPIC Muscle Tank",
+    "name_es": "Musculosa UTOPIC",
+    "price": "$32",
+    "category": "TANKS",
+    "category_es": "MUSCULOSAS",
+    "image_url": ""
+  },
+  {
+    "id": "merch-004",
+    "name": "UTOPIC Mug",
+    "name_es": "Taza UTOPIC",
+    "price": "$18",
+    "category": "ACCESSORIES",
+    "category_es": "ACCESORIOS",
+    "image_url": ""
+  },
+  {
+    "id": "merch-005",
+    "name": "UTOPIC Keychain",
+    "name_es": "Llavero UTOPIC",
+    "price": "$12",
+    "category": "ACCESSORIES",
+    "category_es": "ACCESORIOS",
+    "image_url": ""
+  },
+  {
+    "id": "merch-006",
+    "name": "UTOPIC Hoodie",
+    "name_es": "Buzo UTOPIC",
+    "price": "$65",
+    "category": "OUTERWEAR",
+    "category_es": "BUZOS",
+    "image_url": ""
+  }
+]

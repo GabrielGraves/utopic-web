@@ -1,0 +1,62 @@
+[
+  {
+    "id": "art-001",
+    "name": "ADHILA",
+    "genres": "HARD TECHNO / INDUSTRIAL",
+    "bio": "Raw energy meets industrial precision. ADHILA delivers uncompromising sets that push the boundaries of hard techno.",
+    "photo_url": "/artists/adhila.jpg",
+    "gallery": ["/artists/adhila.jpg"],
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "social": {
+      "instagram": "#",
+      "soundcloud": "#",
+      "spotify": "#",
+      "tiktok": "#"
+    }
+  },
+  {
+    "id": "art-002",
+    "name": "ALYOSHA",
+    "genres": "MELODIC TECHNO / PROGRESSIVE",
+    "bio": "Ethereal soundscapes and driving rhythms. ALYOSHA crafts immersive journeys that blend melody with momentum.",
+    "photo_url": "/artists/alyosha.jpg",
+    "gallery": ["/artists/alyosha.jpg"],
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "social": {
+      "instagram": "#",
+      "soundcloud": "#",
+      "spotify": "#",
+      "tiktok": "#"
+    }
+  },
+  {
+    "id": "art-003",
+    "name": "DB95",
+    "genres": "ELECTRO / BREAKS",
+    "bio": "Futuristic basslines and broken rhythms. DB95 brings a distinct edge to the electronic underground.",
+    "photo_url": "/artists/db95.jpg",
+    "gallery": ["/artists/db95.jpg"],
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "social": {
+      "instagram": "#",
+      "soundcloud": "#",
+      "spotify": "#",
+      "tiktok": "#"
+    }
+  },
+  {
+    "id": "art-004",
+    "name": "SAILØ",
+    "genres": "DEEP TECHNO / MINIMAL",
+    "bio": "Hypnotic grooves and deep atmospheres. SAILØ explores the space between rhythm and texture.",
+    "photo_url": "/artists/sailo.jpg",
+    "gallery": ["/artists/sailo.jpg"],
+    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "social": {
+      "instagram": "#",
+      "soundcloud": "#",
+      "spotify": "#",
+      "tiktok": "#"
+    }
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "utp-2026-001",
+    "series_name": "FREQUENCIES",
+    "chapter": "CHAPTER 01",
+    "title": "The Awakening",
+    "date": "2026-07-18T22:00:00Z",
+    "venue": "NAVE INDUSTRIAL, BCN",
+    "headliners": ["SHDW", "CLOCKWORK", "DVS1"],
+    "co_producers": ["VOID COLLECTIVE", "MODULAR SYSTEMS"],
+    "status": "active",
+    "flyer_url": "/flyers/frequencies-01.jpg",
+    "ticket_link": "https://tickets.utopic.agency/freq-01"
+  },
+  {
+    "id": "utp-2026-002",
+    "series_name": "CONCRETE",
+    "chapter": "VOL. 3",
+    "title": "Brutalist Sessions",
+    "date": "2026-09-12T21:00:00Z",
+    "venue": "HANGAR 8, MAD",
+    "headliners": ["BLANCAh", "RIXX", "PABLO B"],
+    "co_producers": ["BRUTALISTA RECORDS"],
+    "status": "active",
+    "flyer_url": "/flyers/concrete-03.jpg",
+    "ticket_link": "https://tickets.utopic.agency/concrete-03"
+  },
+  {
+    "id": "utp-2026-003",
+    "series_name": "VOID",
+    "chapter": "CHAPTER 00",
+    "title": "Null Point",
+    "date": "2026-10-31T23:59:00Z",
+    "venue": "SILO 47, BCN",
+    "headliners": ["SETA", "HVOB", "KAS:ST"],
+    "co_producers": ["DARKROOM", "MINIMAL TECH"],
+    "status": "active",
+    "flyer_url": "/flyers/void-00.jpg",
+    "ticket_link": "https://tickets.utopic.agency/void-00"
+  },
+  {
+    "id": "utp-2026-004",
+    "series_name": "FREQUENCIES",
+    "chapter": "CHAPTER 02",
+    "title": "Submerged",
+    "date": "2026-12-05T22:00:00Z",
+    "venue": "UNDERGROUND DOCK, BCN",
+    "headliners": ["RADIO SLAVE", "SHLOMO"],
+    "co_producers": ["WATERSHED", "VOID COLLECTIVE"],
+    "status": "draft",
+    "flyer_url": "/flyers/frequencies-02.jpg",
+    "ticket_link": ""
+  },
+  {
+    "id": "utp-2027-001",
+    "series_name": "CONCRETE",
+    "chapter": "VOL. 4",
+    "title": "Raw Material",
+    "date": "2027-02-20T21:00:00Z",
+    "venue": "FACTORY 23, MAD",
+    "headliners": ["SURGEON", "DVS1", "LAURA BCR"],
+    "co_producers": ["BRUTALISTA RECORDS", "MODULAR SYSTEMS"],
+    "status": "draft",
+    "flyer_url": "/flyers/concrete-04.jpg",
+    "ticket_link": ""
+  }
+]

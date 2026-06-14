@@ -1,0 +1,52 @@
+[
+  {
+    "id": "med-001",
+    "type": "youtube",
+    "title": "UTOPIC: Chapter 01 — Awakening",
+    "title_es": "UTOPIC: Capítulo 01 — Despertar",
+    "description": "A visual journey through the first chapter of the Utopic ecosystem.",
+    "description_es": "Un viaje visual a través del primer capítulo del ecosistema Utopic.",
+    "embed_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": "med-002",
+    "type": "youtube",
+    "title": "SHDW @ Utopic Session 001",
+    "description": "Industrial techno set recorded live at Utopic headquarters.",
+    "description_es": "Set de industrial techno grabado en vivo en la sede de Utopic.",
+    "embed_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": "med-003",
+    "type": "soundcloud",
+    "title": "Utopic Residents Mix 001",
+    "description": "Curated by the Utopic roster — 60 minutes of sonic architecture.",
+    "description_es": "Curado por el roster de Utopic — 60 minutos de arquitectura sonora.",
+    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789"
+  },
+  {
+    "id": "med-004",
+    "type": "soundcloud",
+    "title": "CLOCKWORK — Live at Fabric",
+    "description": "Hypnotic grooves recorded live at the iconic London venue.",
+    "description_es": "Grooves hipnóticos grabados en vivo en el icónico recinto de Londres.",
+    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456790"
+  },
+  {
+    "id": "med-005",
+    "type": "spotify",
+    "title": "Utopic Selection Vol.1",
+    "description": "Tracks defining the current sound of the Utopic ecosystem.",
+    "description_es": "Tracks que definen el sonido actual del ecosistema Utopic.",
+    "embed_url": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4WYpdgoIcn6"
+  },
+  {
+    "id": "med-006",
+    "type": "spotify",
+    "title": "Utopic Residents — Essential Picks",
+    "title_es": "Utopic Residents — Selección Esencial",
+    "description": "Hand-picked selections by Utopic management.",
+    "description_es": "Selecciones elegidas a mano por Utopic management.",
+    "embed_url": "https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
+  }
+]
