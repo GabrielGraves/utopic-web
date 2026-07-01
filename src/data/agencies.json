@@ -1,8 +1,17 @@
 [
-  { "id": "a-001", "name": "Agencia 1", "url": "#" },
-  { "id": "a-002", "name": "Agencia 2", "url": "#" },
-  { "id": "a-003", "name": "Agencia 3", "url": "#" },
-  { "id": "a-004", "name": "Agencia 4", "url": "#" },
-  { "id": "a-005", "name": "Agencia 5", "url": "#" },
-  { "id": "a-006", "name": "Agencia 6", "url": "#" }
+  { "id": "a-001", "name": "Analog", "url": "https://www.instagram.com/analog__a/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862885/analog_l3xm7t.png", "fit": "contain" },
+  { "id": "a-002", "name": "Anna", "url": "https://www.instagram.com/anna.agency/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862886/anna_ui02aj.png", "fit": "cover" },
+  { "id": "a-003", "name": "B4", "url": "https://www.instagram.com/b4bookings/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862886/b4_zedomq.png", "fit": "cover" },
+  { "id": "a-004", "name": "Black Box", "url": "https://www.instagram.com/blackboxnl/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862887/blackbox_bb6nd0.png", "fit": "contain" },
+  { "id": "a-005", "name": "Hyper Dreams", "url": "https://www.instagram.com/hyperdreams030/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862888/hyperdreams_mmfjbl.png", "fit": "contain" },
+  { "id": "a-006", "name": "Liaison", "url": "https://www.instagram.com/liaisonartists/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862888/liaison_ibfi4o.png", "fit": "contain" },
+  { "id": "a-007", "name": "Miracle", "url": "https://www.instagram.com/miraclemgmtbarcelona/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862889/miracle_bzlsof.png", "fit": "contain" },
+  { "id": "a-008", "name": "Momentum", "url": "https://www.instagram.com/momentumagency.fr/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862889/momentum_bwlqqr.jpg", "fit": "cover" },
+  { "id": "a-009", "name": "Night Vision", "url": "https://www.instagram.com/nightvision.artists/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862890/nightvisions_rucyt5.jpg", "fit": "cover" },
+  { "id": "a-010", "name": "One World Artists", "url": "https://www.instagram.com/oneworldartists_agency/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862891/OWA_qtdyc6.png", "fit": "contain" },
+  { "id": "a-015", "name": "RAW", "url": "https://www.instagram.com/rawppl/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862892/raw_mqbx9p.png", "fit": "cover" },
+  { "id": "a-011", "name": "Spin", "url": "https://www.instagram.com/spinartistagency/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862891/spin_tjm7oi.png", "fit": "contain" },
+  { "id": "a-012", "name": "The Bullit", "url": "https://www.instagram.com/bullittagency/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862887/bullit_fuvxfv.jpg", "fit": "cover" },
+  { "id": "a-013", "name": "Vesuve", "url": "https://www.instagram.com/vesuveagency/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862892/vesube_pqkp38.png", "fit": "contain" },
+  { "id": "a-014", "name": "WME", "url": "https://www.instagram.com/wme/", "photo": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862893/wme_t6xhec.png", "fit": "cover" }
 ]

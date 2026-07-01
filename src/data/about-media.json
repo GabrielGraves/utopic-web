@@ -1,10 +1,32 @@
 {
   "stand": {
     "image_url": "",
-    "alt": "Stand Utopic"
+    "alt": "Stand Utopic",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782863063/helados_nuulk3.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782863064/abanico_urnz7t.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782863065/masajes1_atxqir.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782863062/masajes_2_teg5cv.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782863064/cabina-fotos_kq2in1.png"
+    ]
   },
   "stage": {
     "image_url": "",
-    "alt": "Puesta en Escena Utopic"
+    "alt": "Puesta en Escena Utopic",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862050/9x9stage_oq9wma.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862050/activatorstage_vbdf24.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862051/airod1stage_zix3dz.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862052/airod2stage_ppiyc5.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862053/alignment_yz0jok.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862053/andresstage_rl6y7n.jpg",
+      { "src": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862054/fest1stage_uiihkv.jpg", "objectPosition": "50% 30%" },
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862055/joysatage1_hpgngf.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862056/joystage2_s4rrfb.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862057/ramirostage_otamrs.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862058/t78anlstage_bgnkwt.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862058/t781stage_ptjqhj.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862059/thomasstage_o6udyo.jpg"
+    ]
   }
 }

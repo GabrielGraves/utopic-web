@@ -1,10 +1,248 @@
 [
-  { "id": "c-001", "name": "999999999", "instagram": "https://instagram.com/999999999.official" },
-  { "id": "c-002", "name": "Alignment", "instagram": "https://instagram.com/alignment.og" },
-  { "id": "c-003", "name": "T78", "instagram": "https://instagram.com/t78_official" },
-  { "id": "c-004", "name": "SHDW", "instagram": "https://instagram.com/" },
-  { "id": "c-005", "name": "DVS1", "instagram": "https://instagram.com/" },
-  { "id": "c-006", "name": "CLOCKWORK", "instagram": "https://instagram.com/" },
-  { "id": "c-007", "name": "RADIO SLAVE", "instagram": "https://instagram.com/" },
-  { "id": "c-008", "name": "SURGEON", "instagram": "https://instagram.com/" }
+    {
+        "id":  "c-001",
+        "name":  "999999999",
+        "instagram":  "https://www.instagram.com/999999999_live/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862164/999999999_klgca6.jpg"
+    },
+    {
+        "id":  "c-003",
+        "name":  "Adhila",
+        "instagram":  "https://www.instagram.com/adhila.aaa/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862164/adhila_ee14tr.jpg"
+    },
+    {
+        "id":  "c-005",
+        "name":  "Airod",
+        "instagram":  "https://www.instagram.com/airod_music/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862165/airod_uc5hw3.jpg"
+    },
+    {
+        "id":  "c-007",
+        "name":  "Alex Di Stefano",
+        "instagram":  "https://www.instagram.com/alexdistefano_official/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862165/alex-di-stefano_zkhhkj.jpg"
+    },
+    {
+        "id":  "c-008",
+        "name":  "Alignment",
+        "instagram":  "https://www.instagram.com/alignment__official/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862166/alignment_digpwt.jpg"
+    },
+    {
+        "id":  "c-009",
+        "name":  "Alt8",
+        "instagram":  "https://www.instagram.com/alt8music/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862167/alt8_tlup7s.jpg"
+    },
+    {
+        "id":  "c-010",
+        "name":  "Alyosha",
+        "instagram":  "https://www.instagram.com/lisandro.alyosha/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862168/alyosha_f2w5bi.jpg"
+    },
+    {
+        "id":  "c-011",
+        "name":  "Amazingblaze",
+        "instagram":  "https://www.instagram.com/amazingblaze909/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862169/amazingblaze_ncdf9t.jpg"
+    },
+    {
+        "id":  "c-012",
+        "name":  "Andres Campo",
+        "instagram":  "https://www.instagram.com/andrescampo/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862170/andres-campo_mnprgl.jpg"
+    },
+    {
+        "id":  "c-013",
+        "name":  "Barbara Lago",
+        "instagram":  "https://www.instagram.com/barbara__lago/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862171/barbara-lago_vsa3pw.jpg"
+    },
+    {
+        "id":  "c-014",
+        "name":  "Briela Veneno",
+        "instagram":  "https://www.instagram.com/brielaveneno/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862172/briela-veneno_hgd4qr.jpg"
+    },
+    {
+        "id":  "c-015",
+        "name":  "Callush",
+        "instagram":  "https://www.instagram.com/carolina_callush/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862173/callush_vaeijq.jpg"
+    },
+    {
+        "id":  "c-016",
+        "name":  "Caravel",
+        "instagram":  "https://www.instagram.com/caravel__/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862174/caravel_jxaazy.jpg"
+    },
+    {
+        "id":  "c-018",
+        "name":  "Coyu",
+        "instagram":  "https://www.instagram.com/coyumusic/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862175/coyu_kzgwiy.jpg"
+    },
+    {
+        "id":  "c-019",
+        "name":  "Craig Conelly",
+        "instagram":  "https://www.instagram.com/craig_connelly/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862176/craig-conelly_jnmya6.jpg"
+    },
+    {
+        "id":  "c-020",
+        "name":  "Daniella Da Silva",
+        "instagram":  "https://www.instagram.com/daniella.dasilva_/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862177/daniella-da-silva_wg1dbh.jpg"
+    },
+    {
+        "id":  "c-021",
+        "name":  "David Forbes",
+        "instagram":  "https://www.instagram.com/djdavidforbes/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862177/david-forbes_wkqash.jpg"
+    },
+    {
+        "id":  "c-022",
+        "name":  "DB95",
+        "instagram":  "https://www.instagram.com/____db95/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862178/db95_tmua5z.jpg"
+    },
+    {
+        "id":  "c-026",
+        "name":  "Ferry Tayle",
+        "instagram":  "https://www.instagram.com/ferrytayle/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862179/ferry-tayle_bwbofh.jpg"
+    },
+    {
+        "id":  "c-028",
+        "name":  "Fjusha",
+        "instagram":  "https://www.instagram.com/fjusha__/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862180/fjusha_zht9i8.jpg"
+    },
+    {
+        "id":  "c-031",
+        "name":  "Joyhauser",
+        "instagram":  "https://www.instagram.com/joyhauser_/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862182/joyhauser_codvf2.jpg"
+    },
+    {
+        "id":  "c-068",
+        "name":  "Greg Downey",
+        "instagram":  "https://www.instagram.com/gregdowney/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862181/greg-downey_qho1p2.jpg"
+    },
+    {
+        "id":  "c-067",
+        "name":  "KRL MX",
+        "instagram":  "https://www.instagram.com/krl_mx.666/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862183/krl-mx_yqhwmt.jpg"
+    },
+    {
+        "id":  "c-033",
+        "name":  "Marhu",
+        "instagram":  "https://www.instagram.com/marhu.music/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862184/marhu_s2hish.jpg"
+    },
+    {
+        "id":  "c-037",
+        "name":  "Milo Spykers",
+        "instagram":  "https://www.instagram.com/milo_spykers/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862185/milo-spykers_pfqk01.jpg"
+    },
+    {
+        "id":  "c-041",
+        "name":  "Odymel",
+        "instagram":  "https://www.instagram.com/odymel__/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862186/odymel_oerfv7.jpg"
+    },
+    {
+        "id":  "c-042",
+        "name":  "Part Time Killer",
+        "instagram":  "https://www.instagram.com/part.time.killer/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862187/part-time-killer_exkfn2.jpg"
+    },
+    {
+        "id":  "c-043",
+        "name":  "Paul Denton",
+        "instagram":  "https://www.instagram.com/djpauldenton/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862188/paul-denton_benrsi.jpg"
+    },
+    {
+        "id":  "c-044",
+        "name":  "Per Pleks",
+        "instagram":  "https://www.instagram.com/per.pleks/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862189/per-pleks_onhnat.jpg"
+    },
+    {
+        "id":  "c-046",
+        "name":  "Ramiro Lopez",
+        "instagram":  "https://www.instagram.com/ramirolopez/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862190/ramiro-lopez_zenld3.jpg"
+    },
+    {
+        "id":  "c-048",
+        "name":  "Regal",
+        "instagram":  "https://www.instagram.com/regal_music/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862190/regal_mg9sod.jpg"
+    },
+    {
+        "id":  "c-050",
+        "name":  "Sailø",
+        "instagram":  "https://www.instagram.com/sailo_ofc/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862191/sailo_qiybnx.jpg"
+    },
+    {
+        "id":  "c-051",
+        "name":  "Santi Lrz",
+        "instagram":  "https://www.instagram.com/santilorz/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862192/santi-lorz_zsw36y.jpg"
+    },
+    {
+        "id":  "c-053",
+        "name":  "Spartaque",
+        "instagram":  "https://www.instagram.com/spartaquelive/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862194/spartaque_qapgpy.jpg"
+    },
+    {
+        "id":  "c-054",
+        "name":  "T78 / Activator",
+        "instagram":  "https://www.instagram.com/t78official/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862193/t78_y9a5ar.jpg"
+    },
+    {
+        "id":  "c-056",
+        "name":  "Teenage Mutants",
+        "instagram":  "https://www.instagram.com/teenagemutants__/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862195/teenage-mutants_ltin98.jpg"
+    },
+    {
+        "id":  "c-058",
+        "name":  "The YellowHeads",
+        "instagram":  "https://www.instagram.com/the_yellowheads/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862196/the-yellow-heads_bxbv7b.jpg"
+    },
+    {
+        "id":  "c-059",
+        "name":  "Thomas Schumacher",
+        "instagram":  "https://www.instagram.com/djthomasschumacher/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862197/thomas-schumacher_fhdzfs.jpg"
+    },
+    {
+        "id":  "c-064",
+        "name":  "Will Rees",
+        "instagram":  "https://www.instagram.com/willreesdj/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862199/will-rees_idafy7.jpg"
+    },
+    {
+        "id":  "c-065",
+        "name":  "Xenia",
+        "instagram":  "https://www.instagram.com/xenia_ua/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862200/xenia_kaiijk.jpg"
+    },
+    {
+        "id":  "c-066",
+        "name":  "Xina Mora",
+        "instagram":  "https://www.instagram.com/laxinamora/",
+        "photo":  "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862201/xina-mora_ptwoyn.jpg"
+    }
 ]

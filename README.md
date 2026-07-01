@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# UTOPIC Worldwide
 
-## Getting Started
+Sitio web oficial de [utopicworldwide.com](https://www.utopicworldwide.com) — agencia de booking, eventos y sello discográfico.
 
-First, run the development server:
+## Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Next.js 16** (App Router, Turbopack)
+- **React 19**
+- **Tailwind CSS v4** (`@theme inline` con paleta de colores personalizada)
+- **Vercel** (hosting + dominio)
+
+## Estructura
+
+```
+src/
+├── app/
+│   ├── page.js           # Home (eventos, past iterations, multimedia)
+│   ├── agency/page.js    # Roster de artistas
+│   ├── label/page.js     # Sello discográfico
+│   ├── about/page.js     # Sobre nosotros (cabina, stage, agencias)
+│   └── artist/[slug]/page.js  # Perfil de artista
+├── components/
+│   ├── Navbar.jsx
+│   ├── Footer.jsx
+│   ├── ClientLayout.jsx  # Layout con LangContext + BookingContext
+│   ├── BookingModal.jsx  # Formulario de booking (vía nodemailer)
+│   ├── Carousel.jsx      # Carrusel de imágenes
+│   ├── EventCard.jsx
+│   ├── ArtistCard.jsx
+│   ├── MediaCard.jsx
+│   ├── PastIterationCard.jsx
+│   ├── VideoPlayer.jsx   # Lazy load con IntersectionObserver
+│   └── PrefetchOnLoad.jsx
+├── context/
+│   ├── LangContext.jsx   # i18n EN/ES con localStorage
+│   └── BookingContext.jsx # Modal de booking global
+├── data/                 # JSON con contenido del sitio
+│   ├── events.json
+│   ├── artists.json
+│   ├── past-iterations.json
+│   ├── cabina.json       # Fotos del photobooth
+│   ├── agencies.json
+│   ├── about-media.json  # Stage carousel + stand gallery
+│   ├── media.json
+│   └── partners.json
+├── lang/
+│   ├── en.js
+│   └── es.js
+└── app/api/contact/route.js  # Endpoint POST para booking
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Media
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Todo el contenido pesado (videos, fotos de artistas, eventos pasados, booth, stage, about, agencies) está servido desde **Cloudinary** para eliminar bandwidth del hosting.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Solo quedan locales:
+- `public/utopic-logo.png`
+- `public/flyers/`
 
-## Learn More
+## Dominio
 
-To learn more about Next.js, take a look at the following resources:
+- **www.utopicworldwide.com** — primary
+- Hosteado en **Vercel**. DNS configurado vía el registrar.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Booking
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+El formulario de booking envía un email a **gabriel@utopicworldwide.com** via **nodemailer** + Gmail SMTP con App Password.
 
-## Deploy on Vercel
+Variables de entorno necesarias:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=gabriel@utopicworldwide.com
+SMTP_PASS=<app-password>
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## i18n
+
+Toggle EN/ES via `LangContext`. El locale se guarda en `localStorage`. No afecta la URL.
+
+- `t("key")` para textos simples
+- `tl(data, "field")` para campos con sufijo `_es` (ej: `bio_es`)
+
+## Desarrollo
+
+```bash
+npm install
+npm run dev      # Next.js + Turbopack
+npm run build    # Producción
+```
+
+Si Turbopack corrompe el cache de `.next/`, borrar la carpeta manualmente.
+
+## Links
+
+- [utopicworldwide.com](https://www.utopicworldwide.com)
+- [Instagram](https://www.instagram.com/utopicworldwide)

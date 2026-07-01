@@ -14,27 +14,34 @@ export async function POST(req) {
       },
     });
 
+    const fields = [
+      ["Artista", artista],
+      ["Fecha", fecha],
+      ["Ciudad", ciudad],
+      ["Productora", productora],
+      ["Club / Venue", club],
+      ["Duración del Set", duracion],
+      ["Email", email],
+      ["Teléfono", telefono],
+      ["Line Up Tentativo", lineup],
+      ["Promotor", promotor],
+    ];
+
+    const text = [
+      "━━━ UTOPIC BOOKING ━━━",
+      "",
+      ...fields.filter(([, v]) => v).map(([label, value]) => `${label.padEnd(20)} ${value}`),
+      ...(mensaje ? ["", "─".repeat(40), `Mensaje:`, mensaje] : []),
+      "",
+      "─".repeat(40),
+    ].join("\n");
+
     await transporter.sendMail({
       from: `"${promotor || "Booking"}" <${process.env.SMTP_USER}>`,
       replyTo: email,
       to: "gabriel@utopicworldwide.com",
-      subject: `Booking Inquiry — ${promotor || "Sin nombre"}`,
-      html: `
-        <h2>Nueva Consulta de Booking</h2>
-        <table style="border-collapse:collapse;width:100%">
-          ${artista ? `<tr><td style="padding:8px 12px;font-weight:bold">Artista</td><td style="padding:8px 12px">${artista}</td></tr>` : ""}
-          ${fecha ? `<tr><td style="padding:8px 12px;font-weight:bold">Fecha</td><td style="padding:8px 12px">${fecha}</td></tr>` : ""}
-          ${ciudad ? `<tr><td style="padding:8px 12px;font-weight:bold">Ciudad</td><td style="padding:8px 12px">${ciudad}</td></tr>` : ""}
-          ${productora ? `<tr><td style="padding:8px 12px;font-weight:bold">Productora</td><td style="padding:8px 12px">${productora}</td></tr>` : ""}
-          ${club ? `<tr><td style="padding:8px 12px;font-weight:bold">Club</td><td style="padding:8px 12px">${club}</td></tr>` : ""}
-          ${duracion ? `<tr><td style="padding:8px 12px;font-weight:bold">Duración del Set</td><td style="padding:8px 12px">${duracion}</td></tr>` : ""}
-          <tr><td style="padding:8px 12px;font-weight:bold">Email</td><td style="padding:8px 12px">${email}</td></tr>
-          ${telefono ? `<tr><td style="padding:8px 12px;font-weight:bold">Teléfono</td><td style="padding:8px 12px">${telefono}</td></tr>` : ""}
-          ${lineup ? `<tr><td style="padding:8px 12px;font-weight:bold">Line Up Tentativo</td><td style="padding:8px 12px">${lineup}</td></tr>` : ""}
-          ${promotor ? `<tr><td style="padding:8px 12px;font-weight:bold">Promotor</td><td style="padding:8px 12px">${promotor}</td></tr>` : ""}
-          ${mensaje ? `<tr><td style="padding:8px 12px;font-weight:bold">Mensaje</td><td style="padding:8px 12px">${mensaje}</td></tr>` : ""}
-        </table>
-      `,
+      subject: `Booking Inquiry (web) — ${productora || promotor || "Sin productora"} | ${artista || "Sin artista"} | ${fecha || "Sin fecha"}`,
+      text,
     });
 
     return Response.json({ success: true });

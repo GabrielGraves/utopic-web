@@ -2,51 +2,51 @@
   {
     "id": "med-001",
     "type": "youtube",
-    "title": "UTOPIC: Chapter 01 — Awakening",
-    "title_es": "UTOPIC: Capítulo 01 — Despertar",
-    "description": "A visual journey through the first chapter of the Utopic ecosystem.",
-    "description_es": "Un viaje visual a través del primer capítulo del ecosistema Utopic.",
-    "embed_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "title": "T78 vs Activator 3-HOURS set",
+    "title_es": "T78 vs Activator 3-HOURS set",
+    "description": "Full back-to-back set recorded live at Utopic. 3 hours of high-energy techno from T78 and Activator.",
+    "description_es": "Set b2b completo grabado en vivo en Utopic. 3 horas de techno de alta energía de T78 y Activator.",
+    "embed_url": "https://www.youtube.com/embed/XraU0ZFyXfc?si=L5HahicubGBSecL-"
   },
   {
     "id": "med-002",
     "type": "youtube",
-    "title": "SHDW @ Utopic Session 001",
-    "description": "Industrial techno set recorded live at Utopic headquarters.",
-    "description_es": "Set de industrial techno grabado en vivo en la sede de Utopic.",
-    "embed_url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+    "title": "Barbara Lago at Utopic Indoor Festival Vol. I",
+    "description": "Industrial techno set recorded live at Utopic Indoor Festival Vol. I. Heavy beats and dark atmospheres.",
+    "description_es": "Set de industrial techno grabado en vivo en Utopic Indoor Festival Vol. I. Beats pesados y atmósferas oscuras.",
+    "embed_url": "https://www.youtube.com/embed/RaFi0q73hVU?si=LgiAne0XiT5UfiON"
   },
   {
     "id": "med-003",
     "type": "soundcloud",
-    "title": "Utopic Residents Mix 001",
-    "description": "Curated by the Utopic roster — 60 minutes of sonic architecture.",
-    "description_es": "Curado por el roster de Utopic — 60 minutos de arquitectura sonora.",
-    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789"
+    "title": "UTOPIC Pres.: ALT8",
+    "description": "A 60-minute mix curated by the Utopic roster showcasing ALT8's signature sound.",
+    "description_es": "Un mix de 60 minutos curado por el roster de Utopic presentando el sonido característico de ALT8.",
+    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2285981906&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
   },
   {
     "id": "med-004",
     "type": "soundcloud",
-    "title": "CLOCKWORK — Live at Fabric",
-    "description": "Hypnotic grooves recorded live at the iconic London venue.",
-    "description_es": "Grooves hipnóticos grabados en vivo en el icónico recinto de Londres.",
-    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456790"
+    "title": "UTOPIC Pres.: AIROD",
+    "description": "Hypnotic grooves and driving basslines from AIROD, recorded live at Utopic.",
+    "description_es": "Grooves hipnóticos y líneas de bajo potentes de AIROD, grabado en vivo en Utopic.",
+    "embed_url": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2285985557&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
   },
   {
     "id": "med-005",
     "type": "spotify",
     "title": "Utopic Selection Vol.1",
-    "description": "Tracks defining the current sound of the Utopic ecosystem.",
-    "description_es": "Tracks que definen el sonido actual del ecosistema Utopic.",
-    "embed_url": "https://open.spotify.com/embed/playlist/37i9dQZF1DX4WYpdgoIcn6"
+    "description": "A curated playlist of tracks defining the current sound of the Utopic ecosystem.",
+    "description_es": "Una playlist curada de tracks que definen el sonido actual del ecosistema Utopic.",
+    "embed_url": "https://open.spotify.com/embed/playlist/12tZ1APJqcmaa1r2UEESvV?utm_source=generator&si=3e5cd9a047ed4999"
   },
   {
     "id": "med-006",
     "type": "spotify",
-    "title": "Utopic Residents — Essential Picks",
-    "title_es": "Utopic Residents — Selección Esencial",
-    "description": "Hand-picked selections by Utopic management.",
-    "description_es": "Selecciones elegidas a mano por Utopic management.",
-    "embed_url": "https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M"
+    "title": "BOUNCY BOUNCe_",
+    "title_es": "BOUNCY BOUNCe_",
+    "description": "High-energy bounce and hard groove selections hand-picked by Utopic management.",
+    "description_es": "Selecciones de bounce y hard groove de alta energía elegidas por Utopic management.",
+    "embed_url": "https://open.spotify.com/embed/playlist/2gwBsZHd9rxwDdhSN22TCA?utm_source=generator&si=37cdda4a0c444617"
   }
 ]

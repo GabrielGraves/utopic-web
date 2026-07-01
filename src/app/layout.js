@@ -22,10 +22,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable}`}
-    >
+    <html lang="en" className={`${spaceGrotesk.variable} ${inter.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body className="bg-background text-on-background font-body antialiased selection:bg-primary selection:text-on-primary-fixed">
         <ClientLayout>{children}</ClientLayout>
       </body>

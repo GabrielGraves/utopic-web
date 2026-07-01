@@ -25,11 +25,7 @@ export default function AgencyPage() {
                 {t("agency.theRoster")}
               </h1>
             </div>
-            <div className="max-w-md">
-              <p className="text-on-surface-variant font-light text-lg leading-relaxed">
-                {t("agency.description")}
-              </p>
-            </div>
+
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">

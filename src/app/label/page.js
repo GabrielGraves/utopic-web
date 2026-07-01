@@ -49,12 +49,7 @@ export default function LabelPage() {
             </div>
           </div>
 
-          <button className="mt-12 group relative px-10 py-4 overflow-hidden border border-primary/30 hover:border-primary transition-colors">
-            <div className="absolute inset-0 bg-primary/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative font-headline tracking-[0.3em] text-xs uppercase text-white font-bold">
-              {t("label.accessVoid")}
-            </span>
-          </button>
+
         </div>
 
         <div className="absolute bottom-12 flex flex-col items-center gap-4">

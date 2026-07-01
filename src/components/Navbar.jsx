@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLang } from "@/context/LangContext";
@@ -10,13 +10,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const { t, locale, setLocale } = useLang();
 
-  const NAV_ITEMS = [
+  const NAV_ITEMS = useMemo(() => [
     { label: t("nav.events"), href: "/" },
     { label: t("nav.agency"), href: "/agency" },
     { label: t("nav.label"), href: "/label" },
-    { label: t("nav.merch"), href: "/merch" },
     { label: t("nav.about"), href: "/about" },
-  ];
+  ], [t]);
 
   function isActive(href) {
     if (href === "/") return pathname === "/";

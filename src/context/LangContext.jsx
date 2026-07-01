@@ -1,30 +1,39 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, useCallback } from "react";
+import { createContext, useContext, useState, useCallback, useEffect } from "react";
 import en from "@/lang/en";
 import es from "@/lang/es";
 
 const langs = { en, es };
 
-const LangContext = createContext();
+const LangContext = createContext(null);
 
 export function useLang() {
-  return useContext(LangContext);
+  const ctx = useContext(LangContext);
+  if (!ctx) {
+    return { locale: "en", setLocale: () => {}, t: (k) => k, tl: (d, f) => d?.[f] ?? "" };
+  }
+  return ctx;
 }
 
 export function LangProvider({ children }) {
   const [locale, setLocaleState] = useState("en");
 
   useEffect(() => {
-    const saved = localStorage.getItem("utopic-lang");
-    if (saved === "es" || saved === "en") setLocaleState(saved);
+    try {
+      const saved = localStorage.getItem("utopic-lang");
+      if (saved === "en" || saved === "es") setLocaleState(saved);
+    } catch {}
   }, []);
 
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    try { localStorage.setItem("utopic-lang", locale); } catch {}
+  }, [locale]);
+
   const setLocale = useCallback((l) => {
-    setLocaleState(l);
-    localStorage.setItem("utopic-lang", l);
-    document.documentElement.lang = l;
-  }, []);
+    if (l !== locale) setLocaleState(l);
+  }, [locale]);
 
   const t = useCallback((key) => {
     const keys = key.split(".");
@@ -37,8 +46,8 @@ export function LangProvider({ children }) {
   }, [locale]);
 
   const tl = useCallback((data, field) => {
-    if (locale === "es" && data[`${field}_es`] !== undefined) return data[`${field}_es`];
-    return data[field];
+    if (locale === "es" && data?.[`${field}_es`] !== undefined) return data[`${field}_es`];
+    return data?.[field] ?? "";
   }, [locale]);
 
   return (

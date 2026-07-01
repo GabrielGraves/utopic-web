@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function ArtistCard({ artist }) {
   const { name, genres, photo_url } = artist;
-  const slug = name.toLowerCase().replace(/\s+/g, "-");
+  const slug = artist.slug || name.toLowerCase().replace(/\s+/g, "-");
 
   return (
     <Link
-      href={`/artist/${encodeURIComponent(slug)}`}
+      href={`/artist/${slug}`}
       className="group relative bg-surface-container-low rounded-xl overflow-hidden hover:bg-surface-container-high transition-all duration-500 hover:-translate-y-1 shadow-2xl h-full block"
     >
       <div className="aspect-[4/5] overflow-hidden relative">

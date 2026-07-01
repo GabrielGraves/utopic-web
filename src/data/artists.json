@@ -2,61 +2,101 @@
   {
     "id": "art-001",
     "name": "ADHILA",
-    "genres": "HARD TECHNO / INDUSTRIAL",
-    "bio": "Raw energy meets industrial precision. ADHILA delivers uncompromising sets that push the boundaries of hard techno.",
-    "photo_url": "/artists/adhila.jpg",
-    "gallery": ["/artists/adhila.jpg"],
-    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "genres": "BOUNCE / HARD TECHNO",
+    "bio": "ADHILA is an emerging DJ and producer from Patagonia, rooted in different branches of Techno such as Hard Trance, Euro Dance, Hard Dance, Bounce and Hardgroove; with her biggest influences being artists like Pegassi, Ueberrest, Krl Mx, Anfisa Letyago, CLTX, DJ HEARTSTRING, among others.\n\nHer musical selection when performing varies depending on how she reads the dancefloor, adapting to the moment and the audience in front of her, while always spreading the groove that defines her.\n\nInspired in her beginnings by artists like Charlotte De Witte, Amelie Lens and Lilly Palmer, she developed in the scene as a self-taught artist.\n\nShe has performed at renowned venues such as Crobar Studio, Utopic, Dvne Park, Crobar Terraza, and as headliner in Bariloche and Puerto Madryn; sharing the booth with TINKERHELL, Briela Veneno (COL), Jose Bonetto, Juliana Gella, among others.",
+    "bio_es": "ADHILA es una DJ y productora emergente de la Patagonia, basada en diferentes ramas del Techno como Hard Trance, Euro Dance, Hard Dance, Bounce y Hardgroove; siendo sus mayores referentes artistas como Pegassi, Ueberrest, Krl Mx, Anfisa Letyago, CLTX, DJ HEARTSTRING, entre otros.\n\nSu selección musical al momento de presentarse varía dependiendo de cómo perciba la pista, adaptándose al momento y al público que esté frente a ella, sin dejar de contagiar el groove que tanto la representa.\n\nInspirándose en sus comienzos por artistas como Charlotte De Witte, Amelie Lens y Lilly Palmer, se ha desarrollado en la escena de forma autodidacta.\n\nLlegando a presentarse en lugares de renombre como Crobar Studio, Utopic, Dvne Park, Crobar Terraza, y como artista principal en las localidades de Bariloche y Puerto Madryn; compartiendo cabina junto a TINKERHELL, Briela Veneno (COL), Jose Bonetto, Juliana Gella, entre otros.",
+    "photo_url": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/adhila_qysbbq.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/nfm0877_pfndlj.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862714/nfm0940_gj9nzs.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/dsc07952_jhrayt.jpg"
+    ],
+    "set": {
+      "type": "youtube",
+      "url": "https://www.youtube.com/embed/gef3qUZysxk"
+    },
+    "presskit": "https://drive.google.com/drive/folders/1Wc_x6EIE0yctT_TvaXhRXkL333ukBchl",
     "social": {
-      "instagram": "#",
-      "soundcloud": "#",
-      "spotify": "#",
-      "tiktok": "#"
+      "instagram": "https://www.instagram.com/adhila.aaa/",
+      "soundcloud": "https://soundcloud.com/adhilaar",
+      "spotify": "https://open.spotify.com/intl-es/artist/6rJjlmpc7KH3qx4zMLziCy",
+      "tiktok": "https://www.tiktok.com/@adhila.aaa"
     }
   },
   {
     "id": "art-002",
     "name": "ALYOSHA",
-    "genres": "MELODIC TECHNO / PROGRESSIVE",
-    "bio": "Ethereal soundscapes and driving rhythms. ALYOSHA crafts immersive journeys that blend melody with momentum.",
-    "photo_url": "/artists/alyosha.jpg",
-    "gallery": ["/artists/alyosha.jpg"],
-    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "genres": "BOUNCE / PSYTRANCE",
+    "bio": "ALYOSHA is an Argentine DJ and producer based in Buenos Aires, known for turning the dancefloor into a space to let loose and move without thinking. His fast, bouncy sets blend Hard Dance, Psytrance, Hard Bounce, Techno and Acid with old school energy.\n\nBorn in Azul, Buenos Aires, he quickly found his place behind the decks and became an active part of the local scene, playing at DURX, Fuego, Crobar and CLIMAX alongside GALACTXTX, Valentina Spirito, May McLaren, KESSLER and Jose Bonetto.\n\nIn 2024 he completed his first European tour through Paris, Madrid and Barcelona. As a producer, his track GALACTIC BOUNCE fuses Acid textures with energetic grooves. He is also the creator of NAVE, a party series in Buenos Aires featuring inflatables, lasers and lights that transform the space into a galactic experience.",
+    "bio_es": "ALYOSHA es un DJ y productor argentino radicado en Buenos Aires, conocido por convertir la pista de baile en un espacio para soltarse y moverse sin pensar. Sus sets rápidos y rebotantes mezclan Hard Dance, Psytrance, Hard Bounce, Techno y Acid con energía old school.\n\nNacido en Azul, Buenos Aires, encontró rápidamente su lugar detrás de las bandejas y se volvió parte activa de la escena local, tocando en DURX, Fuego, Crobar y CLIMAX junto a GALACTXTX, Valentina Spirito, May McLaren, KESSLER y Jose Bonetto.\n\nEn 2024 realizó su primera gira europea por París, Madrid y Barcelona. Como productor, su track GALACTIC BOUNCE fusiona texturas Acid con grooves rebotantes. También es creador de NAVE, un ciclo de fiestas en Buenos Aires con inflables, láseres y luces que transforman el espacio en una experiencia galáctica.",
+    "photo_url": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/alyosha_irvrpp.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862714/7_asv1oa.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/16_tqrcjn.jpg",
+      { "src": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/A6706407_t7khtp.jpg", "objectPosition": "50% 30%" },
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/A6706636_z1ucn9.jpg"
+    ],
+    "set": {
+      "type": "soundcloud",
+      "url": "https://soundcloud.com/alyoshacloud/climaxxl-alyosha-closing-set-bounce-psy-trance-acid-techno"
+    },
+    "presskit": "https://drive.google.com/file/d/1RiYUP1dVxXQ65qyjb01QaNLPTGv07BU5/view",
     "social": {
-      "instagram": "#",
-      "soundcloud": "#",
-      "spotify": "#",
-      "tiktok": "#"
+      "instagram": "https://www.instagram.com/lisandro.alyosha",
+      "soundcloud": "https://soundcloud.com/alyoshacloud",
+      "spotify": "https://open.spotify.com/intl-es/artist/0lav9iT7xC3bsr4qlkEyrc",
+      "tiktok": "https://www.tiktok.com/@lisandro.alyosha"
     }
   },
   {
     "id": "art-003",
     "name": "DB95",
-    "genres": "ELECTRO / BREAKS",
-    "bio": "Futuristic basslines and broken rhythms. DB95 brings a distinct edge to the electronic underground.",
-    "photo_url": "/artists/db95.jpg",
-    "gallery": ["/artists/db95.jpg"],
-    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "genres": "TECHNO / BOUNCE",
+    "bio": "Damian Birman aka DB95 is a DJ/producer born in Buenos Aires, Argentina. Influenced from a very young age by his father's vinyl collection, he had direct contact with disco music, vinyl records and cassettes practically since birth, which drove him to start mixing at just 15 years old.\n\nFull of enthusiasm, at 21, Damian created an electronic music event that would over time become one of Argentina's top electronic music production companies: UTOPIC. Through it he has worked with top-tier artists such as 999999999, Alignment, T78, Part Time Killer, Andres Campo, Thomas Schumacher, Joyhauser and many more.\n\nAmong his most important milestones are performances at some of Buenos Aires' best clubs including Groove Palermo, Uniclub and iconic underground venues such as Caix, Vox, Requiem and others. With a decade immersed in the industry, DB95 arrives with all his Techno, Bounce, Hard Trance and Hard Techno.",
+    "bio_es": "Damian Birman aka DB95, es un DJ/productor nacido en Buenos Aires, Argentina. Influenciado desde muy chico por la colección de vinilos de su padre, tuvo contacto directo con la música disco, los vinilos y los cassettes prácticamente desde su nacimiento, lo que lo impulsó a mezclar desde sus tan solo 15 años.\n\nLleno de entusiasmo, a sus 21 años, Damian crea un evento de música electrónica que con el tiempo se convertiría en una de las mejores productoras de música electrónica de Argentina: UTOPIC. Donde ya supo trabajar con artistas de primer nivel como 999999999, Alignment, T78, Part Time Killer, Andres Campo, Thomas Schumacher, Joyhauser y muchos más.\n\nDentro de sus hitos más importantes se destacan haberse presentado en algunos de los mejores clubes de Buenos Aires como Groove Palermo, Uniclub y venues emblemáticos del underground como Caix, Vox, Requiem entre otros. Ya con una década inmerso en la industria, DB95 llega con todo su Techno, Bounce, Hard Trance y Hard Techno.",
+    "photo_url": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/db95_qrzm1b.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862714/events-42_nwenmb.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/events-45_o9clhp.webp",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/groove_tykzua.jpg"
+    ],
+    "set": {
+      "type": "youtube",
+      "url": "https://www.youtube.com/embed/zA4TsMOrfgE?start=32"
+    },
+    "presskit": "https://drive.google.com/drive/folders/1et9KaUbcY-K5SXYVtgUdbXqLpXxRWaQt",
     "social": {
-      "instagram": "#",
-      "soundcloud": "#",
-      "spotify": "#",
-      "tiktok": "#"
+      "instagram": "https://www.instagram.com/____DB95",
+      "soundcloud": "https://soundcloud.com/db95music",
+      "tiktok": "https://www.tiktok.com/@____db95"
     }
   },
   {
     "id": "art-004",
     "name": "SAILØ",
-    "genres": "DEEP TECHNO / MINIMAL",
-    "bio": "Hypnotic grooves and deep atmospheres. SAILØ explores the space between rhythm and texture.",
-    "photo_url": "/artists/sailo.jpg",
-    "gallery": ["/artists/sailo.jpg"],
-    "youtube": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "slug": "sailo",
+    "labels": ["EXHALE", "RAVE ALERT"],
+    "genres": "BOUNCE / HARD TECHNO",
+    "bio": "SAILØ is a DJ and producer from Buenos Aires, Argentina, focused on the hardest spectrum of electronic music. His sound moves freely between Bounce, Hard Trance, Hard Psy and Hard Techno, delivering high-energy sets without being tied to a single genre.\n\nAvoiding predictable structures, he builds dynamic sets that combine diverse grooves and textures, creating an intense and constantly evolving experience that builds toward peak time.\n\nIn a short time, he has released music on internationally renowned labels and has received support from top-tier artists such as Amelie Lens, who has included his track \"Nobody\" in her sets.\n\nRecently, SAILØ performed at Exhale Buenos Aires in front of more than 12,000 people, one of the most important events in the Argentine electronic scene. He is currently a resident at Utopic, solidifying his position within the local circuit.",
+    "bio_es": "SAILØ es un DJ y productor de Buenos Aires, Argentina, enfocado en el espectro más duro de la música electrónica. Su sonido se mueve libremente entre el Bounce, el Hard Trance, el Hard Psy y el Hard Techno, ofreciendo sets de alta energía sin quedar atado a un solo género.\n\nEvitando estructuras predecibles, construye sets dinámicos que combinan diversos grooves y texturas, creando una experiencia intensa y en constante evolución que se desarrolla hacia el peak time.\n\nEn poco tiempo, ha lanzado música en sellos de renombre internacional y ha recibido el apoyo de artistas de primer nivel como Amelie Lens, quien ha incluido su track \"Nobody\" en sus sets.\n\nRecientemente, SAILØ se presentó en Exhale Buenos Aires frente a más de 12.000 personas, uno de los eventos más importantes de la escena electrónica argentina. Actualmente es residente en Utopic, consolidando su posición dentro del circuito local.",
+    "photo_url": "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862717/sailo_rod3dv.jpg",
+    "gallery": [
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/exhale_iryjbe.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/utopic-vier25_srlmqf.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862715/dsc00002_w0mvfm.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/exports226_c4njkj.jpg",
+      "https://res.cloudinary.com/e3fssq6u/image/upload/v1782862716/stage_fxnxfa.jpg"
+    ],
+    "set": {
+      "type": "youtube",
+      "url": "https://www.youtube.com/embed/dqN9xvg5p-8?start=40"
+    },
+    "presskit": "https://drive.google.com/drive/folders/1O98NPE-U_q7-l9f_e8DCsOttR7j4rCXD",
     "social": {
-      "instagram": "#",
-      "soundcloud": "#",
-      "spotify": "#",
-      "tiktok": "#"
+      "instagram": "https://www.instagram.com/sailo_ofc/",
+      "soundcloud": "https://soundcloud.com/sailo_ofc",
+      "spotify": "https://open.spotify.com/intl-es/artist/2KnjsCCOwf4ktwAnXFougu",
+      "tiktok": "https://www.tiktok.com/@sailo_ofc"
     }
   }
 ]

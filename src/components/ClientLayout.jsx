@@ -2,11 +2,15 @@
 
 import { LangProvider } from "@/context/LangContext";
 import { BookingProvider } from "@/context/BookingContext";
+import PrefetchOnLoad from "@/components/PrefetchOnLoad";
 
 export default function ClientLayout({ children }) {
   return (
     <LangProvider>
-      <BookingProvider>{children}</BookingProvider>
+      <BookingProvider>
+        <PrefetchOnLoad />
+        {children}
+      </BookingProvider>
     </LangProvider>
   );
 }

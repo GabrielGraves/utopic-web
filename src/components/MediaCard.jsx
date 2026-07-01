@@ -47,9 +47,6 @@ export default function MediaCard({ item }) {
         <h3 className="font-headline text-lg font-bold text-white group-hover:text-primary transition-colors">
           {tl(item, "title")}
         </h3>
-        <p className="text-on-surface-variant text-sm mt-1 leading-relaxed">
-          {tl(item, "description")}
-        </p>
       </div>
     </div>
   );
